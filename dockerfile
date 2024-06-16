@@ -1,8 +1,8 @@
 FROM node
 
-WORKDIR /app/
+WORKDIR /app
 
-COPY /app/package*.json  /app/
+COPY ./package*.json  /app
 
 RUN npm install
 

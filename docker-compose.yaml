@@ -1,0 +1,9 @@
+services:
+  client:
+    build: ./  # Build the image from the current directory
+    container_name: dees-site
+    ports:
+      - "5173:5173"  # Map container port 5173 to host port 5173
+    volumes:
+      - ./:/app  # Mount the local 'app' directory into the container's '/app' directory
+      - ./node_modules:/app/node_modules  # Mount the local 'app/node_modules' directory into the container's '/app/node_modules' directory (fix typo)

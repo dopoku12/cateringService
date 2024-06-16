@@ -14,7 +14,7 @@ import {
 
 import { Link as MuiLink } from "@mui/material";
 
-import MenuIcon from "@mui/icons-material/MENU";
+import MenuIcon from "@mui/icons-material/Menu";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PhoneIcon from "@mui/icons-material/Phone";
