@@ -2,93 +2,43 @@ import { Link } from "react-router-dom";
 import {
    AppBar,
    Box,
-   Toolbar,
+   Button,
    List,
    ListItem,
    ListItemText,
+   Stack,
    Typography,
-   IconButton,
-   Drawer,
-   Tooltip,
+   
 } from "@mui/material";
-
-import { Link as MuiLink } from "@mui/material";
-
-import MenuIcon from "@mui/icons-material/Menu";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import PhoneIcon from "@mui/icons-material/Phone";
-
-import { useState } from "react";
-
-const logo = `src/assets/dees_logo.png`;
+import '@fontsource/pacifico/400.css'
 
 const Nav = () => {
-   const [toogleDrawer, setToogleDrawer] = useState(false);
-
+const logo = `src/assets/dees.webp`;
    const listItems = [
+      { name: "Home", url: "/" },
       { name: "Menu", url: "/menu" },
       { name: "Services", url: "/services" },
-      {
-         name: "About Us",
-         url: "/aboutUs",
-      },
+      {name: "About Us",url: "/aboutUs",},
    ].map((value, i) => (
-      <Typography key={i}>
-         <List>
-            <ListItem>
-               <ListItemText>
-                  <Link to={value.url}>{value.name}</Link>
-               </ListItemText>
-            </ListItem>
-         </List>
-      </Typography>
+                  <Link key={i} style={{textDecoration:'none',color:'black'}} to={value.url}>
+               <Button variant="text">
+                  {value.name}
+               </Button>
+                  </Link>
    ));
 
    return (
-      <Box component="nav">
-         <AppBar sx={{ bgcolor: "transparent" }}>
-            <Toolbar>
-               <IconButton onClick={() => setToogleDrawer(true)}>
-                  <MenuIcon />
-               </IconButton>
-               <Drawer
-                  open={toogleDrawer}
-                  onClose={() => setToogleDrawer(false)}
-               >
-                  {listItems}
-               </Drawer>
-               <Box component="div">
-                  <Link to="/">
-                     <img width={200} src={logo} alt="logo" />
+      <Box component="nav" >
+         <AppBar sx={{ bgcolor: "transparent", boxShadow:'none',position:'static',}}>
+              <Box component="div" sx={{display:'flex', flexDirection:'column',justifyContent:'center', alignItems:'center'}} >
+                  <Link  to="/">
+                     <img style={{borderRadius:'50%'}} width={60} src={logo} alt="logo" />
                   </Link>
+               <Typography gutterBottom variant='h5' sx={{ fontFamily: 'pacifico,cursive,arial',color:'black',}} >Dees Catering Services</Typography>
                </Box>
-               <h1>DEES CATERING SERVICES</h1>
-            </Toolbar>
-
-            <Toolbar>
-               <Tooltip title="call us!">
-                  <MuiLink href="tel:+1 301-675-3848">
-                     <PhoneIcon />
-                  </MuiLink>
-               </Tooltip>
-               <IconButton>
-                  <MuiLink
-                     href="https://www.instagram.com/deescateringservices/"
-                     target="_blank"
-                  >
-                     <InstagramIcon />
-                  </MuiLink>
-               </IconButton>
-               <IconButton>
-                  <MuiLink
-                     href="https://www.facebook.com/people/Dees-Catering-Services/100063473123483/"
-                     target="_blank"
-                  >
-                     <FacebookIcon />
-                  </MuiLink>
-               </IconButton>
-            </Toolbar>
+                 <Stack spacing={2} direction='row'>
+                  {listItems}
+            </Stack>
          </AppBar>
       </Box>
    );

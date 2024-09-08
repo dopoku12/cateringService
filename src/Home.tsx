@@ -1,5 +1,11 @@
+
+import { Box } from "@mui/material";
+import { Link } from "react-router-dom";
+
 const Home = () => {
-   return <></>;
+   return <>
+   
+   </>;
 };
 
 export default Home;
