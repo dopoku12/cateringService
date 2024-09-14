@@ -32,8 +32,7 @@ const Home = () => {
    Our Commitment
    </Typography>   
    <Typography variant='subtitle2'>
-    Locally sourced produce and the freshest ingredients mean﻿s food
-
+    Locally sourced produce and the freshest ingredients means food
 that is exceptional in taste.
    </Typography>
 </Box>

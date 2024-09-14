@@ -22,6 +22,8 @@ const darkTheme = createTheme({
     },
    }
 });
+
+function App() {
 const theme = useTheme();
 const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
 
@@ -32,7 +34,6 @@ const footerIcons=[
    links:"https://www.facebook.com/people/Dees-Catering-Services/100063473123483/"}
 ]
 
-function App() {
    return (
       <ThemeProvider theme={darkTheme}>
          <Container sx={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>

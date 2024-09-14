@@ -19,8 +19,8 @@ const logo = `src/assets/dees.webp`;
 
 const listItems = [
    { name: "Home", url: "/" },
-   { name: "Menu", url: "/menu" },
    { name: "Services", url: "/services" },
+   { name: "Menu", url: "/menu" },
    {name: "About",url: "/aboutUs",},
    ].map((value, i) => (
                   <Link  key={i} style={{textDecoration:'none',color:'black'}} to={value.url}>
