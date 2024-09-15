@@ -6,7 +6,7 @@ const MenuPage = () => {
    return(<Box>{
       dishes.map((i,id)=>
       
-      <Typography >{i.category}</Typography >
+      <Typography key={id}>{i.category}</Typography >
    )
 }
    </Box>
