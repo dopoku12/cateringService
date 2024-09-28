@@ -1,5 +1,5 @@
 const AboutUs = () => {
-   const aboutUsimg='src/assets/dees_profile.webp'
+   const aboutUsimg='src/assets/imgs/dees_profile.webp'
    
    return (<>
    <img height='40%' src={aboutUsimg} alt="" />

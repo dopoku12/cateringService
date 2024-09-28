@@ -1,4 +1,4 @@
-import { Box, Container,IconButton, Drawer,Tooltip,Link as MuiLink, Typography } from "@mui/material";
+import { Box, Container,IconButton, Drawer,Tooltip,Link as MuiLink, Typography,Stack } from "@mui/material";
 
 import {useMediaQuery,useTheme} from "@mui/material";
 
@@ -14,7 +14,7 @@ import '@fontsource/inter/100.css'
 
 import Nav from "./components/Nav";
 
-const darkTheme = createTheme({
+const fontTheme = createTheme({
    typography: {
    fontFamily:'inter,arial',
     subtitle2: {
@@ -35,14 +35,14 @@ const footerIcons=[
 ]
 
    return (
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={fontTheme}>
          <Container sx={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
                <Nav/>
                <Outlet/>
                 <Box  component='footer' sx={{display:"flex",flexDirection:'column'}} >
              {
 isDesktop&&(
-< Box >
+<Stack>
    <Typography sx={{borderTop:.5,}}>
             ©2024 by David Opoku.
                   </Typography>
@@ -52,7 +52,7 @@ DeesCateringservices try us and you will be back
                   <Typography>
 Silver Spring MD.20904 Tel: 301-675-3848
                   </Typography>
-</Box>
+</Stack>
                   )
                   }
 <Box>

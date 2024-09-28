@@ -1,14 +1,28 @@
-import { Typography,Box } from "@mui/material";
+import { Typography,Box, Stack, Chip } from "@mui/material";
 import dishes from "../components/Dishes";
+console.log(dishes)
 console.log(dishes)
 const MenuPage = () => {
 
-   return(<Box>{
+   return(<Box>
+      <Stack direction='row' spacing={2}>
+      {
       dishes.map((i,id)=>
-      
-      <Typography key={id}>{i.category}</Typography >
+      <Chip label={i.category} variant="outlined" key={id}></Chip >
    )
 }
+</Stack>
+      
+      {/* <Typography>
+         {
+            .items.map((items,id)=>(
+
+<Typography component={'h2'}>{items.name}</Typography>
+            ))
+   
+   }
+      </Typography>
+          */}
    </Box>
    )
 };

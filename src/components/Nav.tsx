@@ -10,12 +10,10 @@ import {
    Typography,
    Tooltip,
    Link as MuiLink 
-
 } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 
-
-const logo = `src/assets/dees.webp`;
+const logo = `src/assets/imgs/dees.webp`;
 
 const listItems = [
    { name: "Home", url: "/" },
@@ -35,7 +33,7 @@ const listItems = [
    const Nav = () => {
    return (
       <Box component="nav" >
-             <Stack spacing={2} direction='row' marginBottom={6}>
+             <Stack spacing={2} direction='row'marginTop={1} marginBottom={3}>
                   {listItems}
                    <Tooltip title="call us!">
                   <MuiLink href="tel:+1 301-675-3848">
