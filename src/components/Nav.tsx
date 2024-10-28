@@ -3,9 +3,6 @@ import {
    AppBar,
    Box,
    Button,
-   List,
-   ListItem,
-   ListItemText,
    Stack,
    Typography,
    
@@ -30,14 +27,13 @@ const logo = `src/assets/dees.webp`;
    return (
       <Box component="nav" >
          <AppBar sx={{ bgcolor: "transparent", boxShadow:'none',position:'static',}}>
-              <Box component="div" sx={{display:'flex', flexDirection:'column',justifyContent:'center', alignItems:'center'}} >
+            <Stack spacing={2} component="div" sx={{display:'flex', flexDirection:'column',justifyContent:'center', alignItems:'center'}} >
                   <Link  to="/">
                      <img style={{borderRadius:'50%'}} width={60} src={logo} alt="logo" />
                   </Link>
-               <Typography gutterBottom variant='h5' sx={{ fontFamily: 'pacifico,cursive,arial',color:'black',}} >Dees Catering Services</Typography>
-               </Box>
-                 <Stack spacing={2} direction='row'>
-                  {listItems}
+                  <Typography variant='h5' sx={{ fontFamily: 'pacifico,cursive,arial',color:'black',}} children="Dees Catering Services" />
+                 <Typography variant="subtitle2" children="Redefining Food & Event Production"/>
+                  <Stack spacing={2} direction='row' children= {listItems}/>
             </Stack>
          </AppBar>
       </Box>
