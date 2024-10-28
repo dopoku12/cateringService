@@ -33,6 +33,7 @@ const Home = () => {
    <Stack spacing={4}>
       <img src={mainimg} alt="" width="100%"/>
       {statment}
+      
    </Stack>
    </Box>;
 };
