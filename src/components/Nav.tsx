@@ -5,11 +5,11 @@ import {
    Button,
    Stack,
    Typography,
-   
+   Tooltip,
+   Link as MuiLink 
 } from "@mui/material";
-import '@fontsource/pacifico/400.css'
+import PhoneIcon from "@mui/icons-material/Phone";
 
-const Nav = () => {
 const logo = `src/assets/dees.webp`;
    const listItems = [
       { name: "Home", url: "/" },
@@ -17,15 +17,26 @@ const logo = `src/assets/dees.webp`;
       // { name: "Services", url: "/services" },
       {name: "About Us",url: "/aboutUs",},
    ].map((value, i) => (
-                  <Link key={i} style={{textDecoration:'none',color:'black'}} to={value.url}>
-               <Button variant="text">
+                  <Link  key={i} style={{textDecoration:'none',color:'black'}} to={value.url}>
+               <Button size="small" variant="text" color="warning" sx={{color:'ButtonText'}}>
+                  <Typography  fontWeight='bold' fontSize='12px'>
                   {value.name}
+                  </Typography>
                </Button>
                   </Link>
    ));
 
+   const Nav = () => {
    return (
       <Box component="nav" >
+             <Stack spacing={2} direction='row'marginTop={1} marginBottom={3}>
+                  {listItems}
+                   <Tooltip title="call us!">
+                  <MuiLink href="tel:+1 301-675-3848">
+                     <PhoneIcon  color="warning"/>
+                  </MuiLink>
+               </Tooltip>
+            </Stack>
          <AppBar sx={{ bgcolor: "transparent", boxShadow:'none',position:'static',}}>
             <Stack spacing={2} component="div" sx={{display:'flex', flexDirection:'column',justifyContent:'center', alignItems:'center'}} >
                   <Link  to="/">
@@ -40,4 +51,4 @@ const logo = `src/assets/dees.webp`;
    );
 };
 
-export default Nav;
+export default Nav
