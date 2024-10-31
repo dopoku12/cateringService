@@ -28,7 +28,7 @@ const logo = `src/assets/imgs/dees.webp`;
 
    const Nav = () => {
    return (
-      <Box component="nav" >
+      <Box component="nav" marginBottom={4} >
              <Stack spacing={2} direction='row'marginTop={1} marginBottom={3}>
                   {listItems}
                    <Tooltip title="call us!">
@@ -43,7 +43,7 @@ const logo = `src/assets/imgs/dees.webp`;
                      <img style={{borderRadius:'50%'}} width={60} src={logo} alt="logo" />
                   </Link>
                   <Typography variant='h5' sx={{ fontFamily: 'pacifico,cursive,arial',color:'black',}} children="Dees Catering Services" />
-                 <Typography variant="subtitle2" children="Redefining Food & Event Production"/>
+                 <Typography variant="subtitle2"  children="Redefining Food & Event Production"/>
             </Stack>
          </AppBar>
       </Box>
