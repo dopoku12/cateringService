@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 
-const logo = `src/assets/dees.webp`;
+const logo = `src/assets/imgs/dees.webp`;
    const listItems = [
       { name: "Home", url: "/" },
       { name: "Menu", url: "/menu" },
@@ -44,7 +44,6 @@ const logo = `src/assets/dees.webp`;
                   </Link>
                   <Typography variant='h5' sx={{ fontFamily: 'pacifico,cursive,arial',color:'black',}} children="Dees Catering Services" />
                  <Typography variant="subtitle2" children="Redefining Food & Event Production"/>
-                  <Stack spacing={2} direction='row' children= {listItems}/>
             </Stack>
          </AppBar>
       </Box>

@@ -1,4 +1,4 @@
-import { Box, Container,IconButton, Drawer,Tooltip,Link as MuiLink, Typography,Stack } from "@mui/material";
+import { Box, Container,IconButton,Link as MuiLink, Typography,Stack } from "@mui/material";
 
 import {useMediaQuery,useTheme} from "@mui/material";
 
@@ -39,23 +39,17 @@ const footerIcons=[
          <Container sx={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
                <Nav/>
                <Outlet/>
-                <Box  component='footer' sx={{display:"flex",flexDirection:'column'}} >
-             {
-isDesktop&&(
-<Stack>
-   <Typography sx={{borderTop:.5,}}>
-            ©2024 by David Opoku.
-                  </Typography>
-                  <Typography>
-DeesCateringservices try us and you will be back
-                  </Typography>
-                  <Typography>
-Silver Spring MD.20904 Tel: 301-675-3848
-                  </Typography>
-</Stack>
-                  )
-                  }
-<Box>
+               <Box  component='footer' sx={{display:"flex",flexDirection:'column'}} >
+                              {
+                  isDesktop&&(
+                  <Stack>
+                     <Typography sx={{borderTop:.5,}} children=' ©2024 by David Opoku.'/>
+                     <Typography children='DeesCateringservices try us and you will be back'/>
+                     <Typography children='Silver Spring MD.20904 Tel: 301-675-3848'/>
+                  </Stack>
+                           )
+                              }
+               <Box>
   {
      footerIcons.map((i,id)=>(
         <IconButton key={id}>

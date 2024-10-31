@@ -1,7 +1,7 @@
 
 import { Box,Stack,Typography, } from "@mui/material";
 
-const mainimg="src/assets/desscEdit.webp" 
+const mainimg="src/assets/imgs/desscEdit.webp" 
 
 const statment=[
    {
