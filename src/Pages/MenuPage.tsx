@@ -1,4 +1,4 @@
-import { Typography,Box, Stack, Chip, Avatar } from "@mui/material";
+import { Box, Stack, Chip, Avatar } from "@mui/material";
 import dishes from "../components/Dishes";
 console.log(dishes)
 console.log(dishes)
@@ -7,12 +7,8 @@ const MenuPage = () => {
    return(<Box>
       <Stack direction='row' spacing={2}>
       {
-      dishes.map((i,id)=>(
-      <Chip label={i.category} avatar={<Avatar></Avatar>} variant="outlined" key={id}>
-         
-      </Chip >)
-   )
-}
+      dishes.map((i,id)=>(<Chip label={i.category} variant='outlined' size="medium" avatar={<Avatar src={i.img}/>} key={id}/>))
+      }
 </Stack>
       
       {/* <Typography>

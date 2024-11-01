@@ -1,7 +1,8 @@
  let dishes=[
   {
-    "category": "Appetizers",
-    "items": [
+    category: "Appetizer",
+    img:"src/assets/imgs/spring_roll1.webp",
+    items: [
       {
         "name": "Samosa",
         "description": "Fried pastry with a savory filling, such as onions, peas, cheese, beef and other meats, or lentils."
@@ -33,8 +34,9 @@
     ]
   },
   {
-    "category": "Pastries",
-    "items": [
+    category: "Pastries",
+    img:"src/assets/imgs/ring_doughnut.webp",
+    items: [
       {
         "name": "Ring Doughnut",
         "description": "Perfectly Homemade doughnuts with the Best recipe."
@@ -50,8 +52,9 @@
     ]
   },
   {
-    "category": "Salads",
-    "items": [
+    category: "Salads",
+    img:"src/assets/imgs/berry_salad.webp",   
+    items: [
       {
         "name": "Berry Salad",
         "description": "The perfect spring and summer salad recipe – made with Fresh strawberries, raspberries and blueberries, tossed with baby spinach, red onions and pecans, then drizzled with a sweet and tangy raspberry vinaigrette."
@@ -71,8 +74,9 @@
     ]
   },
   {
-    "category": "Entrées",
-    "items": [
+    category: "Entrées",
+    img:"src/assets/imgs/fried_rice.webp",   
+    items: [
       {
         "name": "Rice",
         "description": "Fried rice, Jollof rice, Waakye, Vermicelli rice"
