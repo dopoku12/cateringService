@@ -1,27 +1,50 @@
-import { Box, Stack, Chip, Avatar } from "@mui/material";
+import { Box, Stack, Chip, Avatar, Typography } from "@mui/material";
 import dishes from "../components/Dishes";
+import { useState } from "react";
 console.log(dishes)
-console.log(dishes)
+
 const MenuPage = () => {
+const [cat,setCat]=useState('')
 
-   return(<Box>
-      <Stack direction='row' spacing={2}>
-      {
-      dishes.map((i,id)=>(<Chip label={i.category} variant='outlined' size="medium" avatar={<Avatar src={i.img}/>} key={id}/>))
-      }
-</Stack>
-      
-      {/* <Typography>
-         {
-            .items.map((items,id)=>(
+const menuItems= dishes.map(
+   (i,id)=>{
+   const category=i.category
+   const items=i.items.map((food,index)=>(
+                     <Typography key={index} variant="h6">
+                        {food.name}
+                        <Typography variant="subtitle2" children={food.description}/>
+                     </Typography>
+                     ))       
 
-<Typography component={'h2'}>{items.name}</Typography>
-            ))
-   
+      if(category==cat){
+            return(
+               <Box key={id}>
+                  <Typography variant="h5" children={category}/> 
+                  {items}
+               </Box>
+               )
+         }
    }
-      </Typography>
-          */}
-   </Box>
+)
+
+
+   return(
+<Box>
+   <Stack direction='row' spacing={1.2}>
+      {
+         dishes.map((i,id)=><Chip 
+         key={id} label={i.category} 
+         variant='outlined' size="small" 
+         avatar={<Avatar src={i.img}/>} 
+         onClick={()=>setCat(i.category)}
+      />)
+      }
+   </Stack>
+      
+   <Stack direction='column'>
+      {menuItems}
+   </Stack>
+ </Box>
    )
 };
 
