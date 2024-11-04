@@ -16,14 +16,14 @@ const menuItems= dishes.map(
                      </Typography>
                      ))       
 
-      if(category==cat){
+      
             return(
                <Box key={id}>
                   <Typography variant="h5" children={category}/> 
                   {items}
                </Box>
                )
-         }
+         
    }
 )
 
@@ -41,7 +41,7 @@ const menuItems= dishes.map(
       }
    </Stack>
       
-   <Stack direction='column'>
+   <Stack direction='column' spacing={4}>
       {menuItems}
    </Stack>
  </Box>
