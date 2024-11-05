@@ -9,8 +9,8 @@ import {
    Link as MuiLink 
 } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
+import logo from "../assets/imgs/dees.webp"
 
-const logo = `src/assets/imgs/dees.webp`;
    const listItems = [
       { name: "Home", url: "/" },
       { name: "Menu", url: "/menu" },

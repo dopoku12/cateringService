@@ -1,6 +1,6 @@
  let dishes=[
   {
-    category: "Appetizer",
+    category: "Appetizers",
     img:"src/assets/imgs/spring_roll1.webp",
     items: [
       {

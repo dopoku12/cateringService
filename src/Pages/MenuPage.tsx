@@ -1,4 +1,4 @@
-import { Box, Stack, Chip, Avatar, Typography } from "@mui/material";
+import { Box, Stack, Chip, Avatar, Typography, List, ListItemText, Divider } from "@mui/material";
 import dishes from "../components/Dishes";
 import { useState } from "react";
 console.log(dishes)
@@ -10,18 +10,19 @@ const menuItems= dishes.map(
    (i,id)=>{
    const category=i.category
    const items=i.items.map((food,index)=>(
-                     <Typography key={index} variant="h6">
-                        {food.name}
-                        <Typography variant="subtitle2" children={food.description}/>
-                     </Typography>
+               <List key={index}>
+                  <ListItemText primary={food.name}/>
+                  <ListItemText secondary={<Typography variant="subtitle2">{food.description}</Typography>}/>
+                  <Divider/>
+               </List>
                      ))       
 
       
             return(
-               <Box key={id}>
-                  <Typography variant="h5" children={category}/> 
+               <Stack key={id}>
+                  <Typography variant="h6" children={category}/> 
                   {items}
-               </Box>
+               </Stack>
                )
          
    }
@@ -37,7 +38,8 @@ const menuItems= dishes.map(
          variant='outlined' size="small" 
          avatar={<Avatar src={i.img}/>} 
          onClick={()=>setCat(i.category)}
-      />)
+         />)
+         
       }
    </Stack>
       
