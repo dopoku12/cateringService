@@ -6,8 +6,10 @@ import App from "./App";
 import ErrorPage from "./Pages/ErrorPage";
 import MenuPage from "./Pages/MenuPage";
 import AboutUs from "./Pages/AboutUs";
+import Services from "./Pages/Services";
 import Home from "./Home";
 import { createTheme,ThemeProvider } from '@mui/material/styles';
+import { ListItemText,List } from "@mui/material";
 
 const theme = createTheme({
   typography: {
@@ -15,6 +17,7 @@ const theme = createTheme({
       color: 'GrayText',
     },
   },
+  
 });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -23,10 +26,11 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Router>
          <Routes>
             <Route path="/" element={<App />}>
-               <Route path="/" element={<Home/>}/>
-               <Route path="/menu" element={<MenuPage />} />
-               <Route path="/aboutUs " element={<AboutUs />} />
-               <Route path="*" element={<ErrorPage />} />
+            <Route path="/" element={<Home/>}/>
+            <Route path="/services" element={<Services/>}/>
+            <Route path="/menu" element={<MenuPage />} />
+            <Route path="/aboutUs" element={<AboutUs />} />
+            <Route path="*" element={<ErrorPage />} />
             </Route> 
          </Routes>
       </Router>
